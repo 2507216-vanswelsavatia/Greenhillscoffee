@@ -1,0 +1,442 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Green Hills Coffee Plantation</title>
+
+    <style>
+       ```css
+/* ===== GENERAL PAGE DESIGN ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f5ef;
+    color: #333333;
+    line-height: 1.7;
+}
+
+/* ===== NAVIGATION BAR ===== */
+
+header {
+    background-color: #183d2b;
+    padding: 18px 6%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav h2 {
+    color: #e5c48b;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e5c48b;
+}
+
+/* ===== HERO SECTION ===== */
+
+#home {
+    background: linear-gradient(
+        rgba(15, 40, 25, 0.78),
+        rgba(15, 40, 25, 0.78)
+    );
+    background-color: #315b3d;
+    color: white;
+    text-align: center;
+    padding: 75px 20px;
+}
+
+#home h1 {
+    font-size: 42px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+#home p {
+    font-size: 18px;
+    max-width: 750px;
+    margin: 0 auto 28px;
+}
+
+#home img {
+    display: block;
+    width: 700px;
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin: 35px auto 0;
+    border-radius: 12px;
+    border: 3px solid #e5c48b;
+}
+
+/* ===== BUTTONS AND LINKS ===== */
+
+#home a,
+#contact a {
+    display: inline-block;
+    background-color: #c49a50;
+    color: #183d2b;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 25px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#home a:hover,
+#contact a:hover {
+    background-color: #e5c48b;
+    transform: translateY(-3px);
+}
+
+#home a {
+    margin-top: 10px;
+}
+
+/* ===== GENERAL SECTION DESIGN ===== */
+
+section:not(#home) {
+    padding: 65px 8%;
+}
+
+section h2 {
+    color: #245438;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+section p {
+    margin-bottom: 20px;
+}
+
+/* ===== ABOUT SECTION ===== */
+
+#about {
+    background-color: white;
+}
+
+#about p {
+    max-width: 900px;
+    font-size: 17px;
+}
+
+/* ===== COFFEE VARIETIES ===== */
+
+#varieties {
+    background-color: #eee7d9;
+}
+
+#varieties ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    list-style: none;
+    margin-top: 25px;
+}
+
+#varieties li {
+    background-color: white;
+    color: #245438;
+    padding: 25px 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 4px solid #c49a50;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+#varieties li:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== PRODUCTION PROCESS ===== */
+
+#process {
+    background-color: white;
+}
+
+#process ol {
+    padding-left: 30px;
+    margin-top: 20px;
+}
+
+#process li {
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+/* ===== PLANTATION ACTIVITIES ===== */
+
+#activities {
+    background-color: #eee7d9;
+}
+
+#activities dl {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    max-width: 900px;
+}
+
+#activities dt {
+    color: #245438;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#activities dd {
+    margin-bottom: 12px;
+}
+
+/* ===== CONTACT SECTION ===== */
+
+#contact {
+    background-color: #183d2b;
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #e5c48b;
+}
+
+#contact p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+#contact a {
+    margin: 5px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background-color: #102b1e;
+    color: #dddddd;
+    text-align: center;
+    padding: 22px 15px;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    #home h1 {
+        font-size: 30px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    #home img {
+        height: 260px;
+    }
+
+    section:not(#home) {
+        padding: 40px 6%;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    #varieties ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #activities dl {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    #varieties ul {
+        grid-template-columns: 1fr;
+    }
+}
+```
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <h2>Green Hills Coffee</h2>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#varieties">Coffee Varieties</a></li>
+                <li><a href="#process">Our Process</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <h1>Welcome to Green Hills Coffee Plantation</h1>
+
+        <p>
+            Discover the beauty of coffee farming, experience our green
+            hills, and enjoy the journey from coffee cherry to cup.
+        </p>
+
+        <a href="#about">Explore Our Plantation</a>
+
+        <br><br>
+
+        <img
+            src="Coffee_farm.jpg.jpg"
+            width="450"
+            alt="Beautiful green hills covered with coffee plants"
+            title="Explore the beautiful Green Hills Coffee Plantation">
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>Discover Our Plantation</h2>
+
+        <p>
+            Green Hills Coffee Plantation is dedicated to growing
+            high-quality coffee in a beautiful natural environment.
+            We welcome tourists, coffee lovers, and buyers to discover
+            our coffee varieties and learn about coffee production.
+        </p>
+    </section>
+
+    <!-- Coffee Varieties -->
+    <section id="varieties">
+        <h2>Our Coffee Varieties</h2>
+
+        <p>Discover the coffee varieties grown on our plantation.</p>
+
+        <ul>
+            <li>Arabica</li>
+            <li>Robusta</li>
+            <li>Batian</li>
+            <li>Ruiru 11</li>
+        </ul>
+    </section>
+
+    <!-- Coffee Production Process -->
+    <section id="process">
+        <h2>From Farm to Cup</h2>
+
+        <p>Explore the main stages of our coffee production.</p>
+
+        <ol>
+            <li>Planting</li>
+            <li>Growing and maintenance</li>
+            <li>Harvesting</li>
+            <li>Processing and drying</li>
+            <li>Packaging</li>
+        </ol>
+    </section>
+
+    <!-- Plantation Activities -->
+    <section id="activities">
+        <h2>Life on Our Plantation</h2>
+
+        <dl>
+            <dt>Pruning</dt>
+            <dd>
+                Removing unwanted branches to encourage healthy growth
+                and better coffee production.
+            </dd>
+
+            <dt>Harvesting</dt>
+            <dd>
+                Picking ripe coffee cherries at the right stage
+                to maintain coffee quality.
+            </dd>
+
+            <dt>Drying</dt>
+            <dd>
+                Reducing moisture in processed coffee beans to prepare
+                them for storage and further processing.
+            </dd>
+        </dl>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Plan Your Visit</h2>
+
+        <p>
+            Come and discover the beauty of coffee farming at
+            Green Hills Coffee Plantation.
+        </p>
+
+        <a href="contact.html">Contact the Plantation</a>
+
+        <br><br>
+
+        <a href="https://en.wikipedia.org/wiki/Coffee"
+           target="_blank">
+            Learn About Coffee
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Green Hills Coffee Plantation. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+```
